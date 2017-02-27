@@ -6,6 +6,19 @@ body {
 	background-attachment: fixed;
 }
 
+.jumbotron {
+	background-color: #18c8e4;
+	border-bottom: 4px solid #ff7bac;
+	border-right: 4px solid #7ac943;
+	border-left: 4px solid #7ac943;
+	font-size: 32px;
+}
+
 /*img {
 	background: #cccccc;
 }*/
+
+.footer {
+	position: fixed;
+	bottom: 0;
+}
