@@ -4,9 +4,6 @@
 3. User score counter
 4. Random winning number, between 19-120
 5. Random number for crystals 1-4, between 1-12
-6. Total score (adds all user scores together) PUT THIS ON ICE
-
-Write all of the above to HTML
 */
 
 var winCounter = 0;
@@ -32,7 +29,7 @@ startGame ();
 function pickWinningNum() {
     winningNum = Math.floor(Math.random() * (120 - 19 +1)) + 19;
     console.log("this is the winning number: " + winningNum);
-    document.getElementById("winning-num").innerHTML = winningNum;
+    $("#winning-num").text(winningNum);
 };
 
 // Generate random numbers for each of four crystals
@@ -48,53 +45,53 @@ function pickCrystals() {
 
 // Write click functions for each crystal and print score
 $("#crystal-a").click(function() {
-	document.getElementById("user-score").innerHTML = userScore += crystalA;
+	$("#user-score").text(userScore += crystalA);
 	if (userScore === winningNum) {
 		winCounter++;
-		document.getElementById("win-counter").innerHTML = winCounter;
+		$("#win-counter").text(winCounter);
 		startGame();
 	} else if (userScore > winningNum) {
 		lossCounter++;
-		document.getElementById("loss-counter").innerHTML = lossCounter;
+		$("#loss-counter").text(lossCounter);
 		startGame();
 	}
 });
 
 $("#crystal-b").click(function() {
-	document.getElementById("user-score").innerHTML = userScore += crystalB;
+	$("#user-score").text(userScore += crystalB);
 	if (userScore === winningNum) {
 		winCounter++;
-		document.getElementById("win-counter").innerHTML = winCounter;
+		$("#win-counter").text(winCounter);
 		startGame();
 	} else if (userScore > winningNum) {
 		lossCounter++;
-		document.getElementById("loss-counter").innerHTML = lossCounter;
+		$("#loss-counter").text(lossCounter);
 		startGame();
 	}
 });
 
 $("#crystal-c").click(function() {
-	document.getElementById("user-score").innerHTML = userScore += crystalC;
+	$("#user-score").text(userScore += crystalC);
 	if (userScore === winningNum) {
 		winCounter++;
-		document.getElementById("win-counter").innerHTML = winCounter;
+		$("#win-counter").text(winCounter);
 		startGame();
 	} else if (userScore > winningNum) {
 		lossCounter++;
-		document.getElementById("loss-counter").innerHTML = lossCounter;
+		$("#loss-counter").text(lossCounter);
 		startGame();
 	}
 });
 
 $("#crystal-d").click(function() {
-	document.getElementById("user-score").innerHTML = userScore += crystalD;
+	$("#user-score").text(userScore += crystalD);
 	if (userScore === winningNum) {
 		winCounter++;
-		document.getElementById("win-counter").innerHTML = winCounter;
+		$("#win-counter").text(winCounter);
 		startGame();
 	} else if (userScore > winningNum) {
 		lossCounter++;
-		document.getElementById("loss-counter").innerHTML = lossCounter;
+		$("#loss-counter").text(lossCounter);
 		startGame();
 	}
 });
