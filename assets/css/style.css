@@ -1,7 +1,11 @@
-/*body {
+body {
 	background-image: url("unicorn.png");
-}*/
-
-img {
-	background: #cccccc;
+	background-repeat: no-repeat;
+	background-size: 50%;
+	background-position: right bottom;
+	background-attachment: fixed;
 }
+
+/*img {
+	background: #cccccc;
+}*/
