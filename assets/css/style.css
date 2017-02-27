@@ -14,9 +14,38 @@ body {
 	font-size: 32px;
 }
 
-/*img {
-	background: #cccccc;
-}*/
+#winning-num {
+	font-size: 20px;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	background-color: #7ac943;
+	border-top: 2px solid #fafb10;
+	border-right: 2px solid #fafb10;
+	border-bottom: 2px solid #fafb10;
+	border-left: 2px solid #fafb10;
+}
+
+.images {
+	padding-top: 20px;
+	padding-right: 10px;
+	padding-left: 10px;
+	padding-bottom: 20px;
+}
+
+#user-score {
+	font-size: 20px;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	background-color: #7ac943;
+	border-top: 2px solid #ff7bac;
+	border-right: 2px solid #ff7bac;
+	border-bottom: 2px solid #ff7bac;
+	border-left: 2px solid #ff7bac;
+}
 
 .footer {
 	position: fixed;
