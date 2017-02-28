@@ -1,9 +1,9 @@
 body {
 	background-image: url("unicorn.png");
 	background-repeat: no-repeat;
-	background-size: 50%;
-	background-position: right bottom;
-	background-attachment: fixed;
+	background-size: 30%;
+	background-position: bottom right;
+	background-attachment: relative;
 	z-index: 100;
 }
 
@@ -13,14 +13,27 @@ body {
 	border-right: 4px solid #7ac943;
 	border-left: 4px solid #7ac943;
 	font-size: 32px;
+	background-image: url("unicorn.png");
+	background-repeat: no-repeat;
+	background-size: 40%;
+	background-position: top left;
+/*	background-attachment: fixed;*/
+}
+
+.instructions {
+	border: 2px solid #fafb10;
+	padding: 20px;
+	font-size: 18px;
 }
 
 #winning-num {
-	font-size: 20px;
-	padding-top: 10px;
-	padding-right: 10px;
-	padding-bottom: 10px;
-	padding-left: 10px;
+	position: relative;
+	left: 42%;
+	font-size: 22px;
+	padding-top: 20px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	padding-left: 20px;
 	background-color: #7ac943;
 	border-top: 2px solid #fafb10;
 	border-right: 2px solid #fafb10;
@@ -29,13 +42,22 @@ body {
 }
 
 .images {
+	display: inline-block;
 	padding-top: 20px;
 	padding-right: 10px;
 	padding-left: 10px;
 	padding-bottom: 20px;
 }
 
+.scores {
+	border: 2px solid #18c8e4;
+	padding: 20px;
+}
+
+
 #user-score {
+	position: relative;
+	left: 46.5%;
 	font-size: 20px;
 	padding-top: 10px;
 	padding-right: 10px;
@@ -48,8 +70,18 @@ body {
 	border-left: 2px solid #ff7bac;
 }
 
+.wins, .losses {
+	margin-top: 5px;
+}
+
 .footer {
+	clear: both;
 	position: relative;
-	margin-top: 80px;
-/*	bottom: 0;
-*/}
+	bottom: 0;
+	width: 100%;
+	background-color: #9a97a4;
+	border-top: 4px solid #7ac943;
+	border-right: 4px solid #ff7bac;
+	border-left: 4px solid #ff7bac;
+	font-size: 14px;
+}
