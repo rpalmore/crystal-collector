@@ -8,20 +8,50 @@
 	<title>Crystals Collector!</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Lato:700|PT+Sans" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
 </head>
 
 <body>
+	<nav class="navbar navbar-default">
+  		<div class="container-fluid">
+    		<div class="navbar-header">
+      			<a class="navbar-brand" href="#">Rebecca Palmore</a>
+    		</div>
+    		<ul class="nav navbar-nav">
+      			<li><a href="#">About</a></li>
+      			<li><a href="#">Portfolio</a></li>
+      			<li><a href="#">Contact</a></li>
+    		</ul>
+ 		</div>
+	</nav>
 
-	<div class="container-fluid">
+	<div class="main col-lg-12 text-center">
+		<p>
+			Everyone collects something.
+		</p>
+		<p>
+			Why not make it crystals?
+		</p>
+	</div>
 
-		<header class="jumbotron text-center">
-			Crystals Collector!
-		</header>
+	<div class="line"></div>
 
-		<div class="instructions col-lg-8 col-lg-offset-2">
-	
+	<div class="buttons text-center">
+		<button><img id="crystal-a" src="assets/images/red.png" width="140" height="140"></button>
+		<button><img id="crystal-b" src="assets/images/grey.png" width="140" height="140"></button>
+		<button><img id="crystal-c" src="assets/images/teal.png" width="140" height="140"></button>
+		<button><img id="crystal-d" src="assets/images/blue.png" width="140" height="140"</button>
+	</div>
+
+	<div class="row">
+
+		<div class="instructions col-lg-4 col-lg-offset-2">
+			<p id="intro">
+				Your task
+			</p>
+
 			<p>
 				You will be given a random number at the start of the game.
 			</p>
@@ -42,7 +72,10 @@
 				Each time the game starts, the value of each crystal will change.
 			</p>
 
-			<hr />
+		</div>
+
+
+		<div class="winning-num col-lg-2">
 
 			<p>
 				<span id="winning-num"></span>
@@ -50,58 +83,27 @@
 
 		</div>
 
-		<div class="images col-lg-offset-4">
-			<a href="#"><img id="crystal-a" src="assets/images/red.png" width="9%"></a>
-			<a href="#"><img id="crystal-b" src="assets/images/grey.png" width="15%"></a>
-			<a href="#"><img id="crystal-c" src="assets/images/teal.png" width="10%"></a>
-			<a href="#"><img id="crystal-d" src="assets/images/blue.png" width="15%"></a>
+		<div class="user-score col-lg-2 col-lg-offset-1">
+
+			<p>
+				<span id="user-score"></span>
+			</p>
+
 		</div>
 
-		<div class="scores col-lg-8 col-lg-offset-2">
-
-			<div class="row-a">
-
-				<p class="col-lg-12 text-center">
-					Your total score
-				</p>
-
-			</div>
-
-			<div class="row-b">
-
-				<span id="user-score"></span>
-			</div>
-
-			<hr />
-
-			<div class="row-c">
-
-				<div class="wins col-lg-6 text-center">
-
+		<div class="line-bottom"></div>
+	</div>
+<!-- 
 					<p>
 						Wins: <span id="win-counter"></span>
 					</p>
 
-				</div>
-
-				<div class="losses col-lg-6 text-center">
-
 					<p>
 						Losses: <span id="loss-counter"></span>
-					</p>
+					</p> -->
 
-				</div>
+		
 
-			</div>
-
-		</div>
-
-  			
-  		<div class="footer panel-footer text-center">
-  			Copyright &copy; Rebecca Palmore 2017
-  		</div>
-
-	</div>
 
 <script src="assets/javascript/game.js"></script>
 
