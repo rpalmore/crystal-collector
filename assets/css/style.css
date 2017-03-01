@@ -7,7 +7,6 @@ body {
 }
 
 .navbar {
-	/*position: fixed;*/
 	background-color: #ffffff;
 	border-bottom: 1px solid #b7b8c5;
 	border-right: 1px solid #7ac943;
@@ -15,9 +14,9 @@ body {
 	font-family: 'PT Sans', sans-serif;
 }
 
-.navbar-brand {
+/*.navbar-brand {
 	color: #f15f2a;
-}
+}*/
 
 .container-fluid
 	{
@@ -65,7 +64,6 @@ button {
 }
 
 .instructions {
-	/*clear: both;*/
 	margin-top: 30px;
 	padding: 30px;
 	font-size: 16px;
@@ -106,24 +104,21 @@ button {
 	border-left: 4px solid #7ac943;
 }
 
-.line-bottom {
+.score {
 	clear: both;
-	border-bottom: 4px solid #f15f2a;
-	/*border-bottom: 8px solid #e5aa52;*/
+	background-color: #f15f2a;
+	background-color: #b7b8c5;
+	font-family: 'Lato', sans-serif;
+	font-size: 20px;
+	height: 40px;
+	line-height: 40px;
+	border: 2px solid #18c8e4;
 	width: 50%;
-	margin-left: 42%;
+	margin-left: 47%;
 }
 
-/*.row {
-	border-bottom: 1px solid #fafb10;
-	margin-left: 10%;
-}*/
-	
-
-.scores {
-/*	border: 2px solid #18c8e4;
-*/	padding: 20px;
+.panel-footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
 }
-
-
-

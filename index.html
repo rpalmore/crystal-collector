@@ -14,6 +14,7 @@
 </head>
 
 <body>
+<div class=".container-fluid">
 	<nav class="navbar navbar-default">
   		<div class="container-fluid">
     		<div class="navbar-header">
@@ -27,7 +28,7 @@
  		</div>
 	</nav>
 
-	<div class="main col-lg-12 text-center">
+	<div class="main text-center">
 		<p>
 			Everyone collects something.
 		</p>
@@ -45,7 +46,7 @@
 		<button><img id="crystal-d" src="assets/images/blue.png" width="140" height="140"</button>
 	</div>
 
-	<div class="row">
+	<div class="row col-lg-12">
 
 		<div class="instructions col-lg-4 col-lg-offset-2">
 			<p id="intro">
@@ -91,19 +92,24 @@
 
 		</div>
 
-		<div class="line-bottom"></div>
-	</div>
-<!-- 
-					<p>
+		<div class="score text-center">
+					<p class="wins col-lg-6">
 						Wins: <span id="win-counter"></span>
 					</p>
-
-					<p>
+					<p class="losses col-lg-6">
 						Losses: <span id="loss-counter"></span>
-					</p> -->
+					</p>
+		</div>
+  			
+  		<div class="panel-footer text-center">
 
-		
+  			Copyright &copy; Rebecca Palmore 2017
 
+  		</div>
+
+
+				
+</div>
 
 <script src="assets/javascript/game.js"></script>
 
