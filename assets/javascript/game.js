@@ -3,7 +3,7 @@
 2. Loss counter
 3. User score counter
 4. Random winning number, between 19-120
-5. Random number for crystals 1-4, between 1-12
+5. Random number for crystals A, B, C and D, between 1-12
 */
 
 var winCounter = 0;
@@ -20,7 +20,7 @@ function startGame () {
 pickWinningNum();
 pickCrystals();
 userScore = 0;
-document.getElementById("user-score").innerHTML = userScore;
+$("#user-score").text(userScore);
 }
 
 startGame ();
@@ -32,7 +32,15 @@ function pickWinningNum() {
     $("#winning-num").text(winningNum);
 };
 
+// Trying to heed Ethan's advice and simplify this code 
 // Generate random numbers for each of four crystals
+//    function pickCrystals() {
+//    	var abcd = [crystalA, crystalB, crystalC, crystalD];
+//    abcd = Math.floor(Math.random() * (12 - 1 + 1) ) + 1;
+// console.log("These are crystal numbers (left to right): " + [crystalA] + (" ") 
+//     	+ [crystalB] + (" ") + [crystalC] + (" ") + [crystalD] + (" "));
+// };
+
 function pickCrystals() {
     crystalA = Math.floor(Math.random() * (12 - 1 + 1) ) + 1;
     crystalB = Math.floor(Math.random() * (12 - 1 + 1) ) + 1;
