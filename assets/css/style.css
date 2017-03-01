@@ -114,11 +114,10 @@ button {
 	line-height: 40px;
 	border: 2px solid #18c8e4;
 	width: 50%;
-	margin-left: 47%;
+/*	margin-left: 47%;*/
 }
 
 .panel-footer {
-	position: fixed;
-	bottom: 0;
+	clear: both;
 	width: 100%;
 }
