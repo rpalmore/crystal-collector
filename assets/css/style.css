@@ -73,7 +73,10 @@ button {
 }
 
 .winning-num, .user-score {
-	margin-top: 160px;
+	/*margin-top: 160px;*/
+	margin-top: 10%;
+	width: 150px;
+	height: 150px;
 }
 
 #winning-num {
@@ -83,6 +86,8 @@ button {
 	padding-right: 80px;
 	padding-bottom: 80px;
 	padding-left: 80px;
+	width: 150px;
+	height: 150px;
 	background-color: #7ac943;
 	border-top: 4px solid #ff7bac;
 	border-right: 4px solid #ff7bac;
@@ -97,6 +102,8 @@ button {
 	padding-right: 80px;
 	padding-bottom: 80px;
 	padding-left: 80px;
+	width: 150px;
+	height: 150px;
 	background-color: #ff7bac;
 	border-top: 4px solid #7ac943;
 	border-right: 4px solid #7ac943;
@@ -105,7 +112,11 @@ button {
 }
 
 .score {
-	clear: both;
+	/*clear: left*/;
+	/*clear: both;*/
+	/*position: relative;*/
+	display: block;
+	/*position: absolute;*/
 	background-color: #f15f2a;
 	background-color: #b7b8c5;
 	font-family: 'Lato', sans-serif;
@@ -113,7 +124,7 @@ button {
 	height: 40px;
 	line-height: 40px;
 	border: 2px solid #18c8e4;
-	width: 50%;
+/*	width: 50%;*/
 /*	margin-left: 47%;*/
 }
 

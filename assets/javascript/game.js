@@ -34,12 +34,7 @@ function pickWinningNum() {
 
 // Trying to heed Ethan's advice and simplify this code 
 // Generate random numbers for each of four crystals
-//    function pickCrystals() {
-//    	var abcd = [crystalA, crystalB, crystalC, crystalD];
-//    abcd = Math.floor(Math.random() * (12 - 1 + 1) ) + 1;
-// console.log("These are crystal numbers (left to right): " + [crystalA] + (" ") 
-//     	+ [crystalB] + (" ") + [crystalC] + (" ") + [crystalD] + (" "));
-// };
+
 
 function pickCrystals() {
     crystalA = Math.floor(Math.random() * (12 - 1 + 1) ) + 1;
