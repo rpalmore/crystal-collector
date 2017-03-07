@@ -61,14 +61,10 @@ function pickCrystals() {
     	+ crystal[1] + (" ") + crystal[2] + (" ") + crystal[3] + (" "));
 }
 
-
 // Add a click function to each crystal and if/else statements
-// Was trying to simplify this so no repeated code, but couldn't figure it out!
 
-$("button").click(function() {
-	for (var i = 0; i < 4; i++) {
-	$("#user-score").text(userScore += crystal[i]);
-}
+$("#crystal-a").click(function() {
+	$("#user-score").text(userScore += crystal[0]);
 	if (userScore === winningNum) {
 		winCounter++;
 		$("#win-counter").text(winCounter);
@@ -79,11 +75,57 @@ $("button").click(function() {
 		$("#loss-counter").text(lossCounter);
 		startGame();
 	}
-})
+});
 
+$("#crystal-b").click(function() {
+	$("#user-score").text(userScore += crystal[1]);
+	if (userScore === winningNum) {
+		winCounter++;
+		$("#win-counter").text(winCounter);
+		startGame();
+		audio.play();
+	} else if (userScore > winningNum) {
+		lossCounter++;
+		$("#loss-counter").text(lossCounter);
+		startGame();
+	}
+});
 
-// $("#crystal-a").click(function() {
-// 	$("#user-score").text(userScore += crystal[0]);
+$("#crystal-c").click(function() {
+	$("#user-score").text(userScore += crystal[2]);
+	if (userScore === winningNum) {
+		winCounter++;
+		$("#win-counter").text(winCounter);
+		startGame();
+		audio.play();
+	} else if (userScore > winningNum) {
+		lossCounter++;
+		$("#loss-counter").text(lossCounter);
+		startGame();
+	}
+});
+
+$("#crystal-d").click(function() {
+	$("#user-score").text(userScore += crystal[3]);
+	if (userScore === winningNum) {
+		winCounter++;
+		$("#win-counter").text(winCounter);
+		startGame();
+		audio.play();
+	} else if (userScore > winningNum) {
+		lossCounter++;
+		$("#loss-counter").text(lossCounter);
+		startGame();
+	}
+});
+
+/* PLEASE READ: Worked to simplify this so no repeated code, but couldn't quite figure it out!
+   This is as close as I got*/
+
+// $("button").click(function() {
+// 	for (var i = 0; i < 4; i++) {
+// 	$("#user-score").text(userScore += crystal[i]);
+// 	}
 // 	if (userScore === winningNum) {
 // 		winCounter++;
 // 		$("#win-counter").text(winCounter);
@@ -94,50 +136,6 @@ $("button").click(function() {
 // 		$("#loss-counter").text(lossCounter);
 // 		startGame();
 // 	}
-// });
-
-// $("#crystal-b").click(function() {
-// 	$("#user-score").text(userScore += crystal[1]);
-// 	if (userScore === winningNum) {
-// 		winCounter++;
-// 		$("#win-counter").text(winCounter);
-// 		startGame();
-// 		audio.play();
-// 	} else if (userScore > winningNum) {
-// 		lossCounter++;
-// 		$("#loss-counter").text(lossCounter);
-// 		startGame();
-// 	}
-// });
-
-// $("#crystal-c").click(function() {
-// 	$("#user-score").text(userScore += crystal[2]);
-// 	if (userScore === winningNum) {
-// 		winCounter++;
-// 		$("#win-counter").text(winCounter);
-// 		startGame();
-// 		audio.play();
-// 	} else if (userScore > winningNum) {
-// 		lossCounter++;
-// 		$("#loss-counter").text(lossCounter);
-// 		startGame();
-// 	}
-// });
-
-// $("#crystal-d").click(function() {
-// 	$("#user-score").text(userScore += crystal[3]);
-// 	if (userScore === winningNum) {
-// 		winCounter++;
-// 		$("#win-counter").text(winCounter);
-// 		startGame();
-// 		audio.play();
-// 	} else if (userScore > winningNum) {
-// 		lossCounter++;
-// 		$("#loss-counter").text(lossCounter);
-// 		startGame();
-// 	}
-// });
-
-
+// })
 
 

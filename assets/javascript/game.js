@@ -18,12 +18,19 @@ var crystalD = [];
 var crystal = [4];
 
 // Adding in audio element
-var audio = new Audio("assets/javascript/win.mp3");
+var audio = new Audio("assets/win.mp3");
 
 // Adding in button hover elements
 $("button").hover(function(){
     $(this).css("background-color", "#fafb10");
     }, function(){
+    $(this).css("background-color", "white");
+ });
+
+// And some fun link hover decoration
+$("a").hover(function(){
+    $(this).css("background-color", "#18c8e4");
+     }, function(){
     $(this).css("background-color", "white");
  });
 
@@ -54,6 +61,7 @@ function pickCrystals() {
     	+ crystal[1] + (" ") + crystal[2] + (" ") + crystal[3] + (" "));
 }
 
+// Add a click function to each crystal and if/else statements
 
 $("#crystal-a").click(function() {
 	$("#user-score").text(userScore += crystal[0]);
@@ -110,4 +118,23 @@ $("#crystal-d").click(function() {
 		startGame();
 	}
 });
+
+/* PLEASE READ: Worked to simplify this so no repeated code, but couldn't quite figure it out!
+   This is as close as I got */
+
+// $("button").click(function() {
+// 	for (var i = 0; i < 4; i++) {
+// 	$("#user-score").text(userScore += crystal[i]);
+// 	}
+// 	if (userScore === winningNum) {
+// 		winCounter++;
+// 		$("#win-counter").text(winCounter);
+// 		startGame();
+// 		audio.play();
+// 	} else if (userScore > winningNum) {
+// 		lossCounter++;
+// 		$("#loss-counter").text(lossCounter);
+// 		startGame();
+// 	}
+// })
 
