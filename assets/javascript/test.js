@@ -4,7 +4,7 @@
 3. User score counter
 4. Random winning number, between 19-120
 5. Random number for crystals A, B, C and D, between 1-12
-6. Empty array for all crystals
+6. Empty array for 4 crystals
 */
 
 var winCounter = 0;
@@ -15,16 +15,30 @@ var crystalA = [];
 var crystalB = [];
 var crystalC = [];
 var crystalD = [];
-// var crystals = ["crystalA", "crystalB", "crystalC", "crystalD"];
-var randomNums = "";
-var list = [4];
+var crystal = [4];
+
+// Adding in audio element
+var audio = new Audio("assets/javascript/win.mp3");
+
+// Adding in button hover elements
+$("button").hover(function(){
+    $(this).css("background-color", "#fafb10");
+    }, function(){
+    $(this).css("background-color", "white");
+ });
+
+// And some fun link hover decoration
+$("a").hover(function(){
+    $(this).css("background-color", "#18c8e4");
+     }, function(){
+    $(this).css("background-color", "white");
+ });
 
 // Start game function
 function startGame () {
 pickWinningNum();
 pickCrystals();
 userScore = 0;
-// play();
 $("#user-score").text(userScore);
 }
 
@@ -37,22 +51,24 @@ function pickWinningNum() {
     $("#winning-num").text(winningNum);
 };
 
+//Generate 4 random numbers for crystals
 function pickCrystals() {
-
-for (var i=0; i < 4; i++) {
-list[i] = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
+	for (var i=0; i < 4; i++) {
+	crystal[i] = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
+}
+	// Print numbers to console
+    console.log("These are crystal numbers (left to right): " + crystal[0] + (" ") 
+    	+ crystal[1] + (" ") + crystal[2] + (" ") + crystal[3] + (" "));
 }
 
-// console.log(list);
-    console.log("These are crystal numbers (left to right): " + list[0] + (" ") 
-    	+ list[1] + (" ") + list[2] + (" ") + list[3] + (" "));
+
+// Add a click function to each crystal and if/else statements
+// Was trying to simplify this so no repeated code, but couldn't figure it out!
+
+$("button").click(function() {
+	for (var i = 0; i < 4; i++) {
+	$("#user-score").text(userScore += crystal[i]);
 }
-
-var audio = new Audio("assets/javascript/win.mp3");
-
-
-$("#crystal-a").click(function() {
-	$("#user-score").text(userScore += list[0]);
 	if (userScore === winningNum) {
 		winCounter++;
 		$("#win-counter").text(winCounter);
@@ -63,16 +79,65 @@ $("#crystal-a").click(function() {
 		$("#loss-counter").text(lossCounter);
 		startGame();
 	}
-});
+})
 
-$("#crystal-b").click(function() {
-	$("#user-score").text(userScore += list[1]);
-});
 
-$("button").hover(function(){
-    $(this).css("background-color", "#fafb10");
-    }, function(){
-    $(this).css("background-color", "white");
- });
+// $("#crystal-a").click(function() {
+// 	$("#user-score").text(userScore += crystal[0]);
+// 	if (userScore === winningNum) {
+// 		winCounter++;
+// 		$("#win-counter").text(winCounter);
+// 		startGame();
+// 		audio.play();
+// 	} else if (userScore > winningNum) {
+// 		lossCounter++;
+// 		$("#loss-counter").text(lossCounter);
+// 		startGame();
+// 	}
+// });
+
+// $("#crystal-b").click(function() {
+// 	$("#user-score").text(userScore += crystal[1]);
+// 	if (userScore === winningNum) {
+// 		winCounter++;
+// 		$("#win-counter").text(winCounter);
+// 		startGame();
+// 		audio.play();
+// 	} else if (userScore > winningNum) {
+// 		lossCounter++;
+// 		$("#loss-counter").text(lossCounter);
+// 		startGame();
+// 	}
+// });
+
+// $("#crystal-c").click(function() {
+// 	$("#user-score").text(userScore += crystal[2]);
+// 	if (userScore === winningNum) {
+// 		winCounter++;
+// 		$("#win-counter").text(winCounter);
+// 		startGame();
+// 		audio.play();
+// 	} else if (userScore > winningNum) {
+// 		lossCounter++;
+// 		$("#loss-counter").text(lossCounter);
+// 		startGame();
+// 	}
+// });
+
+// $("#crystal-d").click(function() {
+// 	$("#user-score").text(userScore += crystal[3]);
+// 	if (userScore === winningNum) {
+// 		winCounter++;
+// 		$("#win-counter").text(winCounter);
+// 		startGame();
+// 		audio.play();
+// 	} else if (userScore > winningNum) {
+// 		lossCounter++;
+// 		$("#loss-counter").text(lossCounter);
+// 		startGame();
+// 	}
+// });
+
+
 
 
