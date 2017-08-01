@@ -57,32 +57,51 @@ function pickCrystals() {
 	crystal[i] = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
 }
 
-	// Store values using data() on DOM
-	$("button").data(crystal[i]);
-	// crystal.attr("data-crystal", crystal[i]);
-	// value = jQuery.data("button", crystal[i]);
+// Store values of each crystal to the DOM using data()
+	// $("#crystal-a").data(crystal[0]);
+	// $("#crystal-b").data(crystal[1]);
+	// $("#crystal-c").data(crystal[2]);
+	// $("#crystal-d").data(crystal[3]);
 
-	// Print numbers to console
+// 	$("#crystal-a").click(function(){
+//     $("user-score").data(crystal[0]);
+// });
+	// data("#button-d", crystal[3]);
+	console.log("Here is stored value of crystal A " + crystal[0])
+
+// Print numbers to console
     console.log("These are crystal numbers (left to right): " + crystal[0] + (" ") 
     	+ crystal[1] + (" ") + crystal[2] + (" ") + crystal[3] + (" "));
 }
 
 // Add a click function to each crystal and if/else statements
    
-$("button").click(function() {
-	$("button").index(this) 
-	$("#user-score").text(userScore += value);
-	if (userScore === winningNum) {
-		winCounter++;
-		$("#win-counter").text(winCounter);
-		startGame();
-		audio.play();
-	} else if (userScore > winningNum) {
-		lossCounter++;
-		$("#loss-counter").text(lossCounter);
-		startGame();
-	}
-})
+
+// Attach data to a <div> element, then retrieve the data:
+
+// $("#btn1").click(function(){
+//     $("div").data("greeting", "Hello World");
+// });
+// $("#btn2").click(function(){
+//     alert($("div").data("greeting"));
+// });
+
+
+
+// $("button").click(function() {
+// 	$("button").click(this) 
+// 	$("#user-score").text(userScore += data("button"));
+// 	if (userScore === winningNum) {
+// 		winCounter++;
+// 		$("#win-counter").text(winCounter);
+// 		startGame();
+// 		audio.play();
+// 	} else if (userScore > winningNum) {
+// 		lossCounter++;
+// 		$("#loss-counter").text(lossCounter);
+// 		startGame();
+// 	}
+// })
 
 
 // $("#crystal-a").click(function() {
